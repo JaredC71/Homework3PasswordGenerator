@@ -19,6 +19,13 @@ let generatePassword = () => {
   
   
   let lengthInput = parseInt(prompt('how many characters?')); //how long the password will be
+
+  if(lengthInput < 8 || lengthInput > 128) {
+    alert('please chose a number between 8 and 128');
+    return;
+    
+
+  }
   
   let lowerCaseInput = prompt('Do you want your password to include lowercase characters? type yes or no.'); //does the user want lower case
   lowerCaseInput = lowerCaseInput.toLowerCase();
